@@ -1,0 +1,207 @@
+:root {
+    --color-primary: #77ABB7;
+    --color-secondary: #476D7C;
+    --color-background: #111111;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+    background-color: var(--color-background);
+    background-image: url('/media/topography.svg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center;
+    min-height: 100vh;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(6, 6, 6, 0.67);
+    display: flex;
+    /* justify-content: space-around; */
+    gap: 2%;
+    backdrop-filter: blur(16px); 
+    -webkit-backdrop-filter: blur(10px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    align-items: center;
+    padding: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+    z-index: 1000;
+}
+
+.nav-item {
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid transparent;
+    transition: border 200ms, background-color 200ms, opacity 200ms, color 200ms, transform 200ms ease;
+    padding: 10px; 
+    border-radius: 6px; 
+}
+
+.nav-item img {
+    opacity: 0.75;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    transition: transform 200ms;
+}
+
+.nav-item span {
+    color: rgba(255, 255, 255, 0.75);
+    font-family: 'Rubik', sans-serif;
+    font-size: large;
+    font-weight: 300;
+    transition: color 250ms;
+    line-height: 24px;
+}
+
+.nav-item:hover {
+    opacity: 1;
+    background-color: #ffffff0a; 
+    border: 1px solid rgba(255, 255, 255, 0.36);
+}
+
+.nav-item:hover span {
+    color: #fff; 
+}
+
+.nav-item:hover img {
+    opacity: 1;
+}
+
+.content {
+    margin-top: 60px;
+    padding: 20px;
+}
+
+.container-md {
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(25deg,rgba(0, 255, 0,.25) 8%,rgba(132,94,194,0) 40.5%),linear-gradient(336deg,rgba(0 ,0, 255, .25) 8%,rgba(60,0,136,0) 40.5%);
+    justify-content: space-between;
+    margin-top: 10%;
+    flex: 1;
+    padding-bottom: auto;
+    width: auto;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+    margin-right: 2%;
+    width: 76%;
+}
+
+.text-container p {
+    margin: 0;
+}
+
+.header {
+    color: #ffffffd7;
+    font-family: 'Rubik', sans-serif;
+    font-size: 2rem;
+}
+
+.description {
+    color: #ffffffd7;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.2rem;
+}
+
+.card {
+    background-color: #141414;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    border: 1px solid rgba(255, 255, 255, 0.17);
+    padding: 6px 16px;
+    margin: 14px 0 14px 0;
+    height: auto;
+    width: auto;
+    margin-right: auto;
+    border-radius: 32px;
+}
+
+.card span {
+    color: #ffffffd7;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: lighter;
+    font-size: 18px;
+    text-wrap: nowrap;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid rgba(255, 255, 255, 0.36);
+    box-shadow: inset 0 6px 20px rgba(10, 10, 10, 0.25);
+    background-color: #141414;
+    color: white;
+    margin-top: auto;
+    padding: 20px 10% 0 10%;
+    text-align: center;
+}
+
+footer p {
+    color: #ffffffd7;
+    background-color: rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 8px 18px;
+    flex: 0 0 auto;
+    border-radius: 18px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: lighter;
+    font-size: 16px;
+    margin-top: 0;
+}
+
+footer nav ul {
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer nav ul li {
+    display: inline;
+}
+
+footer nav ul li a {
+    color: rgba(255, 255, 255, 0.75);
+    font-family: 'Rubik', sans-serif;
+    font-size: large;
+    font-weight: 300;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer nav ul li a:hover {
+    color: #fff;
+}
+.dots {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.dots span {
+    width: 2px;
+    height: 2px;
+    margin: 12px 2px;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 50%;
+    display: inline-block;
+}
